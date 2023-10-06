@@ -22,21 +22,31 @@ form h1{
     color: #333;
 }
 
-form .field {
-    width: 80%;
-    margin-top: 10px;
+.field-box{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.field-box label{
+    width: 30%;
     height: 30px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    padding: 5px;
+    text-align: left;
+    float: left;
+    color: #333;
     font-size: 16px;
 }
 
-form input:focus {
-    outline: none;
+.field-box .field{
+    width: 65%;
+    float: right;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 16px;
 }
 
-form .register-button{
+.field-box .register-button{
     width: 40%;
     margin-top: 20px;
     height: 30px;
