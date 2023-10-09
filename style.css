@@ -1,5 +1,5 @@
 body {
-    background: rgb(0,0,0,0.9);
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
     font-family: 'Varela Round', sans-serif;
 }
 .register-box{
@@ -63,12 +63,12 @@ form h1{
     height: 30px;
     border-radius: 20px;
     border: none;
-    background: #4caf50;
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
 .register-button:hover{
-    background: #45a049;
+    background-image: linear-gradient(to left, #00b4db, #0083b0);
 }
