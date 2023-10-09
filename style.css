@@ -31,6 +31,7 @@ form h1{
 .field-box label{
     width: 30%;
     height: 30px;
+    margin: auto;
     text-align: left;
     float: left;
     color: #333;
@@ -41,6 +42,15 @@ form h1{
     width: 65%;
     float: right;
     height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.field-box select {
+    width: calc(65% + 6px);
+    float: right;
+    height: 35px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
