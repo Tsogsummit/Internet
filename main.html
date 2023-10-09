@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./icon.jpeg">
     <title>Simple Register Page</title>
     <link href="./style.css" rel=stylesheet>
+    <link href="./main.js" rel=script>
 </head>
 <body>
     <div class="register-box">
@@ -18,25 +19,25 @@
             </div>
             <div class="field-box">
                 <label for="password">Password</label>
-                <input class="field" type="password" name="password" required>
+                <input class="field" type="password" name="password" id="password" required>
             </div>
             <div class="field-box">
                 <label for="email">E-mail</label>
-                <input class="field" type="text" name="email" required>
+                <input class="field" type="text" name="email" id="email" required>
             </div>
             <div class="field-box">
                 <label for="phone">Phone</label>
-                <input class="field" type="text" name="phone" required>
+                <input class="field" type="text" name="phone" id="phone" required>
             </div>
             <div class="field-box">
                 <label for="address">Address</label>
-                <input class="field" type="text" name="address" required>
+                <input class="field" type="text" name="address" id="address" required>
             </div>
             <div class="field-box">
                 <label for="birthdate">Birthdate</label>
-                <input class="field" type="date" name="birthdate" required>
+                <input class="field" type="date" name="birthdate" id="address" required>
             </div>
-            <input class="register-button" type="submit" name="submit" value="Register" onclick="validateForm()">
+            <button type="button" class = "register-button" onclick="validateForm()">Register</button>
         </form>
     </div>
 </body>
