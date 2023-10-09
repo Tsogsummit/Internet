@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="register-box">
-        <form action="">
+        <form id="registrationForm" action="#" method="post">
             <h1>Register</h1>
             <div class="field-box">
                 <label for="username">Username</label>
@@ -18,11 +18,11 @@
             </div>
             <div class="field-box">
                 <label for="password">Password</label>
-                <input class="field" type="password" name="password" required>
+                <input class="field" type="password" name="password" id="password" required>
             </div>
             <div class="field-box">
                 <label for="email">E-mail</label>
-                <input class="field" type="text" name="email" required>
+                <input class="field" type="text" name="email" id="email" required>
             </div>
             <div class="field-box">
                 <label for="sex">Sex</label>
@@ -35,18 +35,22 @@
             </div>
             <div class="field-box">
                 <label for="phone">Phone</label>
-                <input class="field" type="text" name="phone" required>
+                <input class="field" type="text" name="phone" id="phone" required>
             </div>
             <div class="field-box">
                 <label for="address">Address</label>
-                <input class="field" type="text" name="address" required>
+                <input class="field" type="text" name="address" id="address" required>
             </div>
             <div class="field-box">
                 <label for="birthdate">Birthdate</label>
-                <input class="field" type="date" name="birthdate" required>
+                <input class="field" type="date" name="birthdate" id="birthdate" required>
             </div>
-            <input class="register-button" type="submit" name="submit" value="Register">
+            <button type="button" class = "register-button" onclick="validateForm()">Register</button>
+
+            <script src="./main.js"></script>
         </form>
     </div>
+
+    
 </body>
 </html>

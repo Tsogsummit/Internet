@@ -35,6 +35,7 @@ form h1{
     text-align: left;
     float: left;
     color: #333;
+    font-weight: bold;
     font-size: 16px;
 }
 
@@ -62,12 +63,12 @@ form h1{
     height: 30px;
     border-radius: 20px;
     border: none;
-    background: #333;
+    background: #4caf50;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
 .register-button:hover{
-    background: #444;
+    background: #45a049;
 }
