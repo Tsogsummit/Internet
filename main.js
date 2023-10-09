@@ -7,4 +7,14 @@ function validateForm() {
         alert("Username must be filled out");
         return false;
     }
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email == "") {
+        alert("Email must be filled out");
+        return false;
+    }
+    else if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
 }
