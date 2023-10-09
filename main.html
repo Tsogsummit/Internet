@@ -7,11 +7,10 @@
     <link rel="shortcut icon" href="./icon.jpeg">
     <title>Simple Register Page</title>
     <link href="./style.css" rel=stylesheet>
-    <link href="./main.js" rel=script>
 </head>
 <body>
     <div class="register-box">
-        <form action="">
+        <form id="registrationForm" action="#" method="post">
             <h1>Register</h1>
             <div class="field-box">
                 <label for="username">Username</label>
@@ -35,10 +34,14 @@
             </div>
             <div class="field-box">
                 <label for="birthdate">Birthdate</label>
-                <input class="field" type="date" name="birthdate" id="address" required>
+                <input class="field" type="date" name="birthdate" id="birthdate" required>
             </div>
             <button type="button" class = "register-button" onclick="validateForm()">Register</button>
+
+            <script src="./main.js"></script>
         </form>
     </div>
+
+    
 </body>
 </html>
