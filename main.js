@@ -8,7 +8,6 @@ function validateForm() {
         return false;
     }
     
-
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email == "") {
         alert("Email must be filled out");
