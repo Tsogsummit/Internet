@@ -2,7 +2,8 @@ function validateForm() {
     var username = document.getElementById("username")?.value;
     var email = document.getElementById("email")?.value;
     var password = document.getElementById("password")?.value;
-    
+    var phone = document.getElementById("phone")?.value;
+
     if (username == "") {
         alert("Username must be filled out");
         return false;
@@ -18,12 +19,22 @@ function validateForm() {
         alert("Please enter a valid email address.");
         return;
     }
+
     if(password == "") {
         alert("Password must be filled out");
         return false;
     }
     else if (password.length < 8) {
         alert("Password must be at least 8 characters long.");
+        return;
+    }
+
+    if(phone == ""){
+        alert("Phone must be filled out");
+        return false;
+    }
+    else if(phone.length != 8){
+        alert("Phone number must be 8 digits.");
         return;
     }
 }

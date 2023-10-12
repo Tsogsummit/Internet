@@ -1,5 +1,6 @@
 body {
-    background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,0.6));
+    /* background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,0.6)); */
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -32,6 +33,7 @@ form h1{
 .field-box label{
     width: 30%;
     height: 30px;
+    margin: auto;
     text-align: left;
     float: left;
     color: #333;
@@ -52,6 +54,14 @@ form h1{
     outline: none;
     border-bottom: 1px solid rgba(0,0,255,0.8);
 }
+.field-box select {
+    width: calc(65% + 6px);
+    float: right;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
 
 .register-button{
     width: 40%;
@@ -59,12 +69,14 @@ form h1{
     height: 30px;
     border-radius: 20px;
     border: none;
-    background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,0.6));
+    /* background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,0.6)); */
+    background-image: linear-gradient(to right, #00b4db, #0083b0);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
 .register-button:hover{
-    background: linear-gradient(to left, rgba(255,0,0,0), rgba(0,0,255,0.6));
+    /* background: linear-gradient(to left, rgba(255,0,0,0), rgba(0,0,255,0.6)); */
+    background-image: linear-gradient(to left, #00b4db, #0083b0);
 }
