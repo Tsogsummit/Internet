@@ -1,5 +1,4 @@
 body {
-    /* background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,0.6)); */
     background-image: linear-gradient(to right, #00b4db, #0083b0);
     font-family: 'Varela Round', sans-serif;
 }
@@ -52,7 +51,7 @@ form h1{
 
 .field-box .field:focus{
     outline: none;
-    border-bottom: 1px solid rgba(0,0,255,0.8);
+    border-bottom: 1px solid #0083b0;
 }
 .field-box select {
     width: calc(65% + 6px);
@@ -63,13 +62,17 @@ form h1{
     font-size: 16px;
 }
 
+.field-box select:focus{
+    outline: none;
+    border-bottom: 1px solid #0083b0;
+}
+
 .register-button{
     width: 40%;
     margin-top: 20px;
     height: 30px;
     border-radius: 20px;
     border: none;
-    /* background: linear-gradient(to right, rgba(255,0,0,0), rgba(0,0,255,0.6)); */
     background-image: linear-gradient(to right, #00b4db, #0083b0);
     color: #fff;
     font-size: 16px;
@@ -77,6 +80,5 @@ form h1{
 }
 
 .register-button:hover{
-    /* background: linear-gradient(to left, rgba(255,0,0,0), rgba(0,0,255,0.6)); */
     background-image: linear-gradient(to left, #00b4db, #0083b0);
 }
