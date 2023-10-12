@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <style>
+      body {
+        background-image: url("https://source.unsplash.com/random/1600x900");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 1s ease-in-out;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f1f1f1;
+      }
+      .hidden {
+        display: none;
+      }
+      .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 15px;
+        padding: 50px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        animation: fade 1s;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      label {
+        color: #3c3c3c;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="tel"],
+      input[type="date"],
+      input[type="password"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        box-shadow: 0px 0px 1px black;
+        outline: none;
+      }
+
+      input[type="submit"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: black;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        box-shadow: 0px 0px 5px #ccc;
+      }
+      #submit-button {
+        background: linear-gradient(45deg, #0088cc, #00bfff);
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      #submit-button:hover {
+        background: linear-gradient(45deg, #00bfff, #0088cc);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+        transition: 0.2s;
+      }
+
+      #submit-button:active {
+        transform: translateY(0px);
+        box-shadow: none;
+        transition: 0.05s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label for="firstname">First Name:</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          pattern="[A-Za-z]+"
+          required
+        />
+
+        <label for="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          pattern="[A-Za-z]+"
+          required
+        />
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" pattern="[0-9]{1-3}" required />
+
+        <label for="sex">Sex:</label>
+        <select id="sex" name="sex" required>
+          <option value="">--Select--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required />
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{1-8}" />
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street" required />
+        <label for="password">Password:</label>
+        <input type="password" pattern="(?=.*\d)(?=.*[A-Z]).{8,}" required />
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">--Select Country--</option>
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+          <option value="mexico">Mexico</option>
+          <option value="uk">UK</option>
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
+          <option value="mongolia">Mongolia</option>
+        </select>
+        <div></div>
+        <input class="hidden" id="submit-button" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+  <script>
+    var backgrounds = [
+      "https://source.unsplash.com/random/1600x900",
+      "https://source.unsplash.com/random/1600x901",
+      "https://source.unsplash.com/random/1600x902",
+      "https://source.unsplash.com/random/1600x903",
+      "https://source.unsplash.com/random/1600x904",
+    ];
+    var i = 0;
+    setInterval(function () {
+      document.body.style.backgroundImage = "url('" + backgrounds[i] + "')";
+      i = (i + 1) % backgrounds.length;
+    }, 5000);
+    const firstNameInput = document.getElementById("firstname");
+    const lastNameInput = document.getElementById("lastname");
+    const ageInput = document.getElementById("age");
+    const sexInput = document.getElementById("sex");
+    const streetInput = document.getElementById("street");
+    const countryInput = document.getElementById("country");
+    const birthDateInput = document.getElementById("birthdate");
+    const submitBtn = document.getElementById("submit-button");
+
+    function checkForm() {
+      if (
+        firstNameInput.value &&
+        lastNameInput.value &&
+        ageInput.value &&
+        sexInput.value &&
+        streetInput.value &&
+        countryInput.value &&
+        birthDateInput.value
+      ) {
+        submitBtn.classList.remove("hidden");
+      } else {
+        submitBtn.classList.add("hidden");
+      }
+    }
+
+    firstNameInput.addEventListener("input", checkForm);
+    lastNameInput.addEventListener("input", checkForm);
+    ageInput.addEventListener("input", checkForm);
+    sexInput.addEventListener("input", checkForm);
+    streetInput.addEventListener("input", checkForm);
+    countryInput.addEventListener("input", checkForm);
+    birthDateInput.addEventListener("input", checkForm);
+  </script>
+</html>
