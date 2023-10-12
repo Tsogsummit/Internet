@@ -3,7 +3,10 @@ function validateForm() {
     var email = document.getElementById("email")?.value;
     var password = document.getElementById("password")?.value;
     var phone = document.getElementById("phone")?.value;
-
+    var firstname = document.getElementById("firstname")?.value;
+    var lastname = document.getElementById("lastname")?.value;
+    var age = document.getElementById("age")?.value;
+    
     if (username == "") {
         alert("Username must be filled out");
         return false;

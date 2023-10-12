@@ -1,15 +1,15 @@
-var backgrounds = [
-    "https://source.unsplash.com/random/1600x900",
-    "https://source.unsplash.com/random/1600x901",
-    "https://source.unsplash.com/random/1600x902",
-    "https://source.unsplash.com/random/1600x903",
-    "https://source.unsplash.com/random/1600x904",
-  ];
-  var i = 0;
-  setInterval(function () {
-    document.body.style.backgroundImage = "url('" + backgrounds[i] + "')";
-    i = (i + 1) % backgrounds.length;
-  }, 5000);
+// var backgrounds = [
+//     "https://source.unsplash.com/random/1600x900",
+//     "https://source.unsplash.com/random/1600x901",
+//     "https://source.unsplash.com/random/1600x902",
+//     "https://source.unsplash.com/random/1600x903",
+//     "https://source.unsplash.com/random/1600x904",
+//   ];
+//   var i = 0;
+//   setInterval(function () {
+//     document.body.style.backgroundImage = "url('" + backgrounds[i] + "')";
+//     i = (i + 1) % backgrounds.length;
+//   }, 5000);
   const firstNameInput = document.getElementById("firstname");
   const lastNameInput = document.getElementById("lastname");
   const ageInput = document.getElementById("age");
