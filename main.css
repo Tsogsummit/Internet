@@ -1,5 +1,5 @@
 body {
-<<<<<<< HEAD
+
     background-image: url("https://source.unsplash.com/random/1600x900");
     background-size: cover;
     background-position: center;
@@ -94,10 +94,9 @@ body {
     box-shadow: none;
     transition: 0.05s;
   }
-=======
-    background-image: linear-gradient(to right, #00b4db, #0083b0);
-    font-family: 'Varela Round', sans-serif;
-}
+    /* background-image: linear-gradient(to right, #00b4db, #0083b0); */
+    /* font-family: 'Varela Round', sans-serif; */
+/* } */
 
 .register-box{
     width: 360px;
@@ -178,4 +177,3 @@ form h1{
 .register-button:hover{
     background-image: linear-gradient(to left, #00b4db, #0083b0);
 }
->>>>>>> lab3_tsog

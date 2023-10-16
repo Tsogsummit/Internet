@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 var backgrounds = [
     "https://source.unsplash.com/random/1600x900",
     "https://source.unsplash.com/random/1600x901",
@@ -43,7 +43,7 @@ var backgrounds = [
   streetInput.addEventListener("input", checkForm);
   countryInput.addEventListener("input", checkForm);
   birthDateInput.addEventListener("input", checkForm);
-=======
+
 function validateForm() {
     var username = document.getElementById("username")?.value;
     var email = document.getElementById("email")?.value;
@@ -92,4 +92,4 @@ function validateForm() {
 
     alert("You have successfully registered!");
 }
->>>>>>> lab3_tsog
+
