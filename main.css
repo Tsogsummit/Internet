@@ -31,20 +31,6 @@ form h1{
   color: #333;
 }
 
-
-
-input[type="submit"] {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: black;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 18px;
-  box-shadow: 0px 0px 5px #ccc;
-}
-
 .register-box{
   width: 40%;
   max-width: 800px;
@@ -97,17 +83,13 @@ input[type="submit"] {
   border-bottom: 1px solid #0083b0;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="date"],
-input[type="password"],
 .field-box select{
   float: right;
   width: 65%;
   height: 30px;
-  padding: 10px;
   border: none;
   border-radius: 5px;
+  border: 1px solid #ccc;
   font-size: 16px;
   outline: none;
 }
