@@ -44,6 +44,6 @@ function validateForm() {
         return;
     }
 
-    alert("You have successfully registered!");
+    // alert("You have successfully registered!");
 }
 
