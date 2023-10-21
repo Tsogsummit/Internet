@@ -45,5 +45,6 @@ function validateForm() {
     }
 
     // alert("You have successfully registered!");
+    window.location.href = "./confirm_email.html";
 }
 
