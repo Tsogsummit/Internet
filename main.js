@@ -1,8 +1,20 @@
+var username;
+var email;
+var password;
+var phone;
+
+document.getElementById("user-email").textContent = GetEmail();
+
+function GetEmail()
+{
+    return document.getElementById("email")?.value;
+}
+
 function validateForm() {
-    var username = document.getElementById("username")?.value;
-    var email = document.getElementById("email")?.value;
-    var password = document.getElementById("password")?.value;
-    var phone = document.getElementById("phone")?.value;
+    username = document.getElementById("username")?.value;
+    email = document.getElementById("email")?.value;
+    password = document.getElementById("password")?.value;
+    phone = document.getElementById("phone")?.value;
 
     var isProper = CheckProperInfo(username, email, password, phone);
     if(!isProper)
