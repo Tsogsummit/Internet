@@ -9,13 +9,16 @@
 
 <body>
     <div class="register-box">
-        <h2 id = "user-email"></h2>
-        
-        <div class="confirm-field">
-            <label for="phone">Баталгаажуулах код</label>
-            <input class="field" type="text" name="phone" id="phone">
-        </div>
-        <button type="button" class = "register-button" onclick="">Confirm</button>
+        <form id="registrationForm" action="#">
+            <h2 id="user-email"></h2>
+
+            <div class="confirm-field">
+                <label for="phone">Баталгаажуулах код</label>
+                <input class="field" type="text" name="confirm-code" id="confirm-code">
+            </div>
+            <button type="button" class="confirm-button" onclick="ClickConfirmButton()">Confirm</button>
+        </form>
+
         <script src="./main.js"></script>
     </div>
 </body>

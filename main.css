@@ -130,7 +130,23 @@ h2 {
   background-image: linear-gradient(to left, #00b4db, #0083b0);
 }
 
-.confirm-field
-{
+.confirm-button {
+  width: 40%;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  background-image: linear-gradient(to right, #00b4db, #0083b0);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-image: linear-gradient(to left, #00b4db, #0083b0);
+}
+
+.confirm-field {
   font-size: 20px;
 }

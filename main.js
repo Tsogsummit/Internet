@@ -11,6 +11,22 @@ if(mailField)
     mailField.textContent = sentence;
 }
 
+function ClickConfirmButton()
+{
+    var confirmCode = document.getElementById("confirm-code")?.value;
+    if(confirmCode == "")
+    {
+        alert("Confirm field must be filled out");
+        return;
+    }
+    else if(confirmCode.length != 6)
+    {
+        alert("Please enter a correct confirm code")
+        return;
+    }
+    alert("Баталгаажлаа!");
+}
+
 function validateForm() {
     username = document.getElementById("username")?.value;
     email = document.getElementById("email")?.value;
