@@ -3,11 +3,12 @@ var email;
 var password;
 var phone;
 
-document.getElementById("user-email").textContent = GetEmail();
-
-function GetEmail()
+var mailField = document.getElementById("user-email");
+if(mailField)
 {
-    return document.getElementById("email")?.value;
+    let savedMail = localStorage.getItem("savedEmail");
+    let sentence = `Таны ${savedMail} хаяг руу баталгаажуулах код явуулсан.`;
+    mailField.textContent = sentence;
 }
 
 function validateForm() {
@@ -17,8 +18,9 @@ function validateForm() {
     phone = document.getElementById("phone")?.value;
 
     var isProper = CheckProperInfo(username, email, password, phone);
-    if(!isProper)
+    if (!isProper)
         return;
+    localStorage.setItem("savedEmail", email);
     window.location.href = "./confirm_email.html";
 }
 
@@ -33,7 +35,6 @@ function CheckProperInfo(username, email, password, phone) {
         alert("Email must be filled out");
         return false;
     }
-
     else if (!emailRegex.test(email)) {
         alert("Please enter a valid email address.");
         return false;

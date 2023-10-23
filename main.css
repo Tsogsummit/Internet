@@ -9,6 +9,7 @@ body {
   padding: 0;
   background-color: #f1f1f1;
 }
+
 .hidden {
   display: none;
 }
@@ -25,7 +26,7 @@ form {
   align-items: center;
 }
 
-h1{
+h1 {
   font-size: 60px;
   font-family: 'Roboto';
   margin-bottom: 10px;
@@ -34,7 +35,15 @@ h1{
   text-align: center;
 }
 
-.register-box{
+h2 {
+  font-size: 30px;
+  font-family: 'Roboto';
+  color: black;
+  text-align: center;
+}
+
+
+.register-box {
   width: 40%;
   max-width: 800px;
   margin: 0 auto;
@@ -46,22 +55,24 @@ h1{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   animation: fade 1s;
 }
+
 @keyframes fade {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
-.field-box{
+.field-box {
   width: 100%;
   display: inline-block;
   margin-bottom: 10px;
 }
 
-.field-box label{
+.field-box label {
   width: 30%;
   height: 30px;
   margin: auto;
@@ -72,7 +83,7 @@ h1{
   font-size: 16px;
 }
 
-.field-box .field{
+.field-box .field {
   width: 65%;
   float: right;
   height: 30px;
@@ -81,12 +92,12 @@ h1{
   font-size: 16px;
 }
 
-.field-box .field:focus{
+.field-box .field:focus {
   outline: none;
   border-bottom: 1px solid #0083b0;
 }
 
-.field-box select{
+.field-box select {
   float: right;
   width: 65%;
   height: 30px;
@@ -97,12 +108,12 @@ h1{
   outline: none;
 }
 
-.field-box select:focus{
+.field-box select:focus {
   outline: none;
   border-bottom: 1px solid #0083b0;
 }
 
-.register-button{
+.register-button {
   width: 40%;
   margin-top: 20px;
   height: 30px;
@@ -115,6 +126,6 @@ h1{
   cursor: pointer;
 }
 
-.register-button:hover{
+.register-button:hover {
   background-image: linear-gradient(to left, #00b4db, #0083b0);
 }
