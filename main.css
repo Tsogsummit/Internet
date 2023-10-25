@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 750px;
+  background: linear-gradient(to right, #00b4db, #0083b0);
 }
 
 .hidden {
@@ -51,16 +52,12 @@ h2 {
 
 
 .register-box {
-  width: 40%;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  animation: fade 1s;
 }
 
 @keyframes fade {
