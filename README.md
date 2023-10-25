@@ -7,3 +7,6 @@ https://www.canva.com/design/DAFxAcE3wkA/ob3kcsK4yEMDo6vEtxG2OQ/edit?utm_content
 # design2:
 https://www.figma.com/file/w0tMUly7UBwWoaj19fexoH/Registration-form-UI-(Community)?type=design&node-id=0-1&mode=design&t=tH8njM7ZxESqKvIl-0
 
+#Version 2
+
+
