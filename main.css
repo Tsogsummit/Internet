@@ -39,7 +39,7 @@ h1 {
   font-family: 'Roboto';
   margin-bottom: 10px;
   padding-top: 55px;
-  color: #daeeee;
+  color: white;
   text-align: center;
 }
 
@@ -119,15 +119,14 @@ h2 {
 
 .register-button {
   width: 40%;
-  margin-top: 20px;
-  height: 30px;
+  padding: 10px;
   border-radius: 20px;
-  border: none;
-  background-image: linear-gradient(to right, #00b4db, #0083b0);
+  background: linear-gradient(to right, #00b4db, #0083b0);
   color: #fff;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  border: none;
 }
 
 .register-button:hover {
@@ -153,4 +152,8 @@ h2 {
 
 .confirm-field {
   font-size: 20px;
+}
+
+input[type="checkbox"] {
+  margin-right: 15px;
 }
