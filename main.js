@@ -32,10 +32,19 @@ function validateForm() {
     email = document.getElementById("email")?.value;
     password = document.getElementById("password")?.value;
     phone = document.getElementById("phone")?.value;
+    const checkbox = document.querySelector('input[type="checkbox"]');
 
     var isProper = CheckProperInfo(username, email, password, phone);
-    if (!isProper)
+    
+    if (!isProper) {
         return;
+    }
+
+    if (!checkbox.checked) {
+        alert("Please accept the terms of use");
+        return;
+    }
+
     localStorage.setItem("savedEmail", email);
     window.location.href = "./confirm_email.html";
 }
