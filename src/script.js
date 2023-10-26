@@ -92,20 +92,35 @@ function CheckProperInfo(username, email, password, phone) {
     return true;
 }
 
-function getData(){
-    var country_sel = document.getElementById("country");
+var count_get_data = 0;
+var country_sel = document.getElementById("country");
 
-    for (var key in data) {
-        var option = document.createElement("option");
-        option.value = key;
-        option.text = data[key].name;
-        country_sel.appendChild(option);
-        console.log(data[key].name);
+function getData(){
+    if (count_get_data == 0){
+        for (var key in country_data) {
+            var option = document.createElement("option");
+            option.value = key;
+            option.text = country_data[key].name;
+            country_sel.appendChild(option);
+            console.log(country_data[key].name);
+        }
+        count_get_data++;
     }
 }
 
 
-  var data = [
+// country_sel.addEventListener("change", function() {
+//     var selected = this.key;
+//     com_sel.innerHTML = "";
+//     for (var key in dist_list[selected].committee) {
+//         var option = document.createElement("option");
+//         option.value = key;
+//         option.text = dist_list[selected].committee[key];
+//         com_sel.appendChild(option);
+//     }
+// });
+
+var country_data = [
     {
     "name": "Afghanistan",
     "dial_code": "+93",
