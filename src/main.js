@@ -91,3 +91,20 @@ function CheckProperInfo(username, email, password, phone) {
 
     return true;
 }
+
+fetch('./data.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json(); // Step 2: Parse the JSON data
+  })
+  .then(jsonData => {
+    // Step 3: Access the data
+    console.log("Name:", jsonData.name);
+    console.log("Age:", jsonData.age);
+    console.log("City:", jsonData.city);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
