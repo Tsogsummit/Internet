@@ -3,12 +3,23 @@ var mailField = document.getElementById("user-email");
 var valCode = Math.floor(100000 + Math.random() * 900000);
 localStorage.setItem("savedCode", valCode);
 
-if(mailField)
-{
-    let savedMail = localStorage.getItem("savedEmail");
-    let sentence = `Таны ${savedMail} хаяг руу баталгаажуулах код явуулсан.`;
-    mailField.textContent = sentence;
-}
+var time = null;
+
+var sendButton = document.getElementById("send-button");
+
+sendButton.addEventListener("click", function(){
+    if(time == null || Date.now() > time){
+        sendEmail();
+        if(mailField){
+            let savedMail = localStorage.getItem("savedEmail");
+            let sentence = `Таны ${savedMail} хаяг руу баталгаажуулах код явуулсан.`;
+            mailField.textContent = sentence;
+        }
+    }
+    else {
+        alert("Please wait for 5 minutes");
+    }
+});
 
 function ClickConfirmButton()
 {
@@ -41,7 +52,7 @@ function sendEmail(){
         res => {
             localStorage.setItem("savedUsername", "");
             localStorage.setItem("savedEmail", "");
-            console.log(res);
+            time = Date.now() + 300000;
             alert("message sent!");
         })
         .catch((err) => console.log(err));
