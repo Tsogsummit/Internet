@@ -108,17 +108,11 @@ function getData(){
     }
 }
 
+var phone_text = document.getElementById("phone");
 
-// country_sel.addEventListener("change", function() {
-//     var selected = this.key;
-//     com_sel.innerHTML = "";
-//     for (var key in dist_list[selected].committee) {
-//         var option = document.createElement("option");
-//         option.value = key;
-//         option.text = dist_list[selected].committee[key];
-//         com_sel.appendChild(option);
-//     }
-// });
+country_sel.addEventListener("change", function() {
+    phone_text.value = country_data[country_sel.value].dial_code;
+});
 
 var country_data = [
     {
