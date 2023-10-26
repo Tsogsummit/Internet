@@ -8,5 +8,5 @@ https://www.canva.com/design/DAFxAcE3wkA/ob3kcsK4yEMDo6vEtxG2OQ/edit?utm_content
 https://www.figma.com/file/w0tMUly7UBwWoaj19fexoH/Registration-form-UI-(Community)?type=design&node-id=0-1&mode=design&t=tH8njM7ZxESqKvIl-0
 
 # Version 2
-
+Бүртгэх товч дарахад өөр хуудас руу шилжих ба энэ нь и-мейл хаягыг баталгаажуулах хуудас байна. Энд 6 оронтой тоо оруулах талбар байгаа, оруулад баталгаажуулах дарна. Бас эхний хуудас дээр үйлчилгээний нөхцөл шалгах checkbox байгаа, тэрийг дарсан эсэхийг шалгана.
 
