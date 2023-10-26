@@ -10,3 +10,5 @@ https://www.figma.com/file/w0tMUly7UBwWoaj19fexoH/Registration-form-UI-(Communit
 # Version 2
 Бүртгэх товч дарахад өөр хуудас руу шилжих ба энэ нь и-мейл хаягыг баталгаажуулах хуудас байна. Энд 6 оронтой тоо оруулах талбар байгаа, оруулад баталгаажуулах дарна. Бас эхний хуудас дээр үйлчилгээний нөхцөл шалгах checkbox байгаа, тэрийг дарсан эсэхийг шалгана.
 
+# Version 3
+https://nummta-my.sharepoint.com/:w:/r/personal/20b1num0725_stud_num_edu_mn/Documents/Lab5_tailan.docx?d=we184d72bf6534f40b74f2f0536636ece&csf=1&web=1&e=NZkwvz
