@@ -13,12 +13,18 @@
             <h2 id="user-email"></h2>
 
             <div class="confirm-field">
-                <label for="phone">Баталгаажуулах код</label>
+                <label for="confirm-code">Баталгаажуулах код</label>
                 <input class="field" type="text" name="confirm-code" id="confirm-code">
             </div>
+            <button type="button" class="confirm-button" onclick="sendEmail()">Send mail</button>
             <button type="button" class="confirm-button" onclick="ClickConfirmButton()">Confirm</button>
         </form>
-
-        <script src="./script.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"> </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("TUEQI8OtWBNGKWGQO");
+        })();
+        </script>   
+        <script src="./mail_script.js"></script>
     </div>
 </body>

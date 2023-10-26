@@ -3,30 +3,6 @@ var email;
 var password;
 var phone;
 
-var mailField = document.getElementById("user-email");
-if(mailField)
-{
-    let savedMail = localStorage.getItem("savedEmail");
-    let sentence = `Таны ${savedMail} хаяг руу баталгаажуулах код явуулсан.`;
-    mailField.textContent = sentence;
-}
-
-function ClickConfirmButton()
-{
-    var confirmCode = document.getElementById("confirm-code")?.value;
-    if(confirmCode == "")
-    {
-        alert("Confirm field must be filled out");
-        return;
-    }
-    else if(confirmCode.length != 6)
-    {
-        alert("Please enter a correct confirm code")
-        return;
-    }
-    alert("Баталгаажлаа!");
-}
-
 function validateForm() {
     username = document.getElementById("username")?.value;
     email = document.getElementById("email")?.value;
@@ -44,7 +20,7 @@ function validateForm() {
         alert("Please accept the terms of use");
         return;
     }
-
+    localStorage.setItem("savedUsername", username);
     localStorage.setItem("savedEmail", email);
     window.location.href = "./confirm_email.html";
 }
@@ -84,37 +60,36 @@ function CheckProperInfo(username, email, password, phone) {
         alert("Phone must be filled out");
         return false;
     }
-    else if (phone.length != 8) {
-        alert("Phone number must be 8 digits.");
-        return false;
-    }
 
     return true;
 }
 
 var count_get_data = 0;
 var country_sel = document.getElementById("country");
+var phone_text = document.getElementById("phone");
 
-function getData(){
+function getCountryData(){
     if (count_get_data == 0){
         for (var key in country_data) {
             var option = document.createElement("option");
-            option.value = key;
+            option.value = country_data[key].code;
             option.text = country_data[key].name;
             country_sel.appendChild(option);
-            console.log(country_data[key].name);
         }
         count_get_data++;
     }
 }
 
-var phone_text = document.getElementById("phone");
-
 country_sel.addEventListener("change", function() {
-    phone_text.value = country_data[country_sel.value].dial_code;
+    phone_text.value = country_data[country_sel.selectedIndex - 1].dial_code;
 });
 
 var country_data = [
+    {
+        "name": "Mongolia",
+        "dial_code": "+976",
+        "code": "MN"
+    },
     {
     "name": "Afghanistan",
     "dial_code": "+93",
@@ -824,11 +799,6 @@ var country_data = [
     "name": "Monaco",
     "dial_code": "+377",
     "code": "MC"
-    },
-    {
-    "name": "Mongolia",
-    "dial_code": "+976",
-    "code": "MN"
     },
     {
     "name": "Montenegro",
