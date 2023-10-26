@@ -1,4 +1,8 @@
 var mailField = document.getElementById("user-email");
+
+var valCode = Math.floor(100000 + Math.random() * 900000);
+localStorage.setItem("savedCode", valCode);
+
 if(mailField)
 {
     let savedMail = localStorage.getItem("savedEmail");
@@ -14,19 +18,19 @@ function ClickConfirmButton()
         alert("Confirm field must be filled out");
         return;
     }
-    else if(confirmCode.length != 6)
-    {
+    else if(confirmCode != localStorage.getItem("savedCode")){
         alert("Please enter a correct confirm code")
         return;
     }
     alert("Баталгаажлаа!");
+    window.location.href = "./main.html";
 }
 
 function sendEmail(){
     var params = {
         name: localStorage.getItem("savedName"),
         email: localStorage.getItem("savedEmail"),
-        message : "Hello there!"
+        message : "Validation code is: " + localStorage.getItem("savedCode") + "."
     };
 
     const serviceId = "service_9p8xn5g";
