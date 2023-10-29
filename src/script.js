@@ -75,7 +75,7 @@ function calculateAge() {
     if (currentDate.getMonth() < birthdate.getMonth() || (currentDate.getMonth() === birthdate.getMonth() && currentDate.getDate() < birthdate.getDate())) {
         age--;
     }
-    document.getElementById("age").innerHTML = age;
+    document.getElementById("ageSpan").textContent = age;
 }
 var count_get_data = 0;
 var country_sel = document.getElementById("country");
