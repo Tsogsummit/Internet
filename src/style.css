@@ -155,5 +155,7 @@ h2 {
 }
 
 input[type="checkbox"] {
-  margin-right: 15px;
+  float: left;
+  margin-right: 40px; 
 }
+
