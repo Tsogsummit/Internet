@@ -63,25 +63,19 @@ function CheckProperInfo(username, email, password, phone) {
 
     return true;
 }
+document.getElementById("birthdate").addEventListener("input", function() {
+    calculateAge();
+});
+
 function calculateAge() {
-   
     var birthdateInput = document.getElementById("birthdate").value;
-
-   
     var birthdate = new Date(birthdateInput);
-
- 
     var currentDate = new Date();
-
-
     var age = currentDate.getFullYear() - birthdate.getFullYear();
-
- 
     if (currentDate.getMonth() < birthdate.getMonth() || (currentDate.getMonth() === birthdate.getMonth() && currentDate.getDate() < birthdate.getDate())) {
         age--;
     }
-
-    document.getElementById("age").innerHTML = "Your age is: " + age;
+    document.getElementById("age").innerHTML = age;
 }
 var count_get_data = 0;
 var country_sel = document.getElementById("country");
