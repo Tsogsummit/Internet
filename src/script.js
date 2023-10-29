@@ -77,6 +77,7 @@ function calculateAge() {
     }
     document.getElementById("ageSpan").textContent = age;
 }
+
 var count_get_data = 0;
 var country_sel = document.getElementById("country");
 var phone_text = document.getElementById("phone");
