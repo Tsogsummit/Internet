@@ -98,6 +98,7 @@ country_sel.addEventListener("change", function() {
     phone_text.value = country_data[country_sel.selectedIndex - 1].dial_code;
 });
 
+
 var country_data = [
     {
         "name": "Mongolia",
