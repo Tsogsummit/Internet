@@ -10,7 +10,7 @@ function setCookie(cname,cvalue,exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
   }
   
-  function getCookie(cname) {
+function getCookie(cname) {
     let name = cname + "=";
     let decodedCookie = decodeURIComponent(document.cookie);
     let ca = decodedCookie.split(';');
@@ -24,9 +24,9 @@ function setCookie(cname,cvalue,exdays) {
       }
     }
     return "";
-  }
+}
   
-  function checkCookie() {
+function checkCookie() {
     let user = getCookie("username");
     if (user != "") {
       alert("Welcome again " + user);
@@ -36,7 +36,7 @@ function setCookie(cname,cvalue,exdays) {
          setCookie("username", user, 30);
        }
     }
-  }
+}
 
 function validateForm() {
     username = document.getElementById("username")?.value;
@@ -98,6 +98,7 @@ function CheckProperInfo(username, email, password, phone) {
 
     return true;
 }
+
 document.getElementById("birthdate").addEventListener("input", function() {
     calculateAge();
 });
@@ -133,8 +134,27 @@ country_sel.addEventListener("change", function() {
     phone_text.value = country_data[country_sel.selectedIndex - 1].dial_code;
 });
 
+function Style(){
+    document.body.style.background = data_color.light.bodyBackground;
+    document.getElementsByClassName("container")[0].style.backgroundImage = data_color.light.containerBackground;
+    document.getElementsByTagName("h1")[0].style.color = data_color.light.h1Color;
+    document.getElementsByClassName("register-box")[0].style.background = data_color.light.registerBoxBackground;
+    //set shadow
+    document.getElementsByClassName("register-box")[0].style.boxShadow = data_color.light.registerBoxShadow;
+    // set .fieldbox label color js to css
+    // document.getElementsByClassName("fieldbox")[0].getElementsByTagName("label")[0].style.color = data_color.light.labelColor; 
+    console.log("style working");
+}
 
-
+var data_color = {
+    light : {
+        bodyBackground : "linear-gradient(to right, #00b4db, #0083b0)",
+        h1Color : "white",
+        registerBoxBackground : "rgba(255, 255, 255, 0.9)",
+        registerBoxShadow : "0 0 20px rgba(0, 0, 0, 0.3)",
+        labelColor : "#333",
+    }
+}
 
 var country_data = [
     {

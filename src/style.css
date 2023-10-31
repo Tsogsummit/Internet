@@ -1,13 +1,10 @@
 body {
-  background-image: linear-gradient(to right, #00b4db, #0083b0);
   font-family: 'Varela Round', sans-serif;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: background-image 1s ease-in-out;
   margin: 0;
   padding: 0;
-  background-color: #f1f1f1;
 }
 
 .container {
@@ -15,7 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 750px;
-  background: linear-gradient(to right, #00b4db, #0083b0);
 }
 
 .hidden {
@@ -39,14 +35,6 @@ h1 {
   font-family: 'Roboto';
   margin-bottom: 10px;
   padding-top: 55px;
-  color: white;
-  text-align: center;
-}
-
-h2 {
-  font-size: 30px;
-  font-family: 'Roboto';
-  color: black;
   text-align: center;
 }
 
@@ -55,9 +43,7 @@ h2 {
   width: 80%;
   max-width: 400px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes fade {
