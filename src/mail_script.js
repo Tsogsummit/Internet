@@ -57,3 +57,17 @@ function sendEmail(){
         })
         .catch((err) => console.log(err));
 }
+
+function Style(){
+    document.body.style.background = data_color.light.bodyBackground;
+    document.getElementsByClassName("register-box")[0].style.background = data_color.light.registerBoxBackground;
+    document.getElementsByClassName("register-box")[0].style.boxShadow = data_color.light.registerBoxShadow;
+}
+
+var data_color = {
+    light : {
+        bodyBackground : "linear-gradient(to right, #00b4db, #0083b0)",
+        registerBoxBackground : "rgba(255, 255, 255, 0.9)",
+        registerBoxShadow : "0 0 20px rgba(0, 0, 0, 0.3)",
+    }
+}
